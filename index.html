@@ -8,9 +8,24 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Anta es la agencia de comunicación de la nueva generación de marcas. Unimos estrategia de negocio, contenido que la gente quiere ver, talento e influencia y prensa. Sin postureo, con resultados.">
+<link rel="canonical" href="https://www.antacomunicacion.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.antacomunicacion.com/">
+<meta property="og:site_name" content="Anta Comunicación">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="anta. — No hacemos marketing. Creamos cultura.">
+<meta property="og:description" content="La agencia de la nueva generación de marcas. Estrategia, talento e influencia, contenido y prensa. Sin postureo, con resultados.">
+<meta property="og:image" content="https://www.antacomunicacion.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anta. — No hacemos marketing. Creamos cultura.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="anta. — No hacemos marketing. Creamos cultura.">
+<meta name="twitter:description" content="La agencia de la nueva generación de marcas. Sin postureo, con resultados.">
+<meta name="twitter:image" content="https://www.antacomunicacion.com/og-image.png">
+<meta name="theme-color" content="#2B1C14">
+<link rel="stylesheet" href="/fonts.css">
 <style>
   :root{
     --hueso:#EFE4D0;--paper:#F6EEDF;--asfalto:#2B1C14;--asfalto-2:#3A281E;
@@ -136,9 +151,34 @@
   .contact .btn{margin-top:34px}
   .contact .info{margin-top:44px;display:flex;gap:30px;justify-content:center;flex-wrap:wrap;font-family:var(--disp);font-size:15px;color:var(--grey)}
   .contact .info b{color:var(--hueso);font-weight:500}
+  /* FORM */
+  .cform{max-width:560px;margin:40px auto 0;text-align:left;display:grid;gap:16px}
+  .cform .frow{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+  @media(max-width:560px){.cform .frow{grid-template-columns:1fr}}
+  .cform label{font-family:var(--disp);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:8px}
+  .cform input,.cform textarea{width:100%;background:rgba(239,228,208,.05);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--hueso);font-family:var(--body);font-size:16px;transition:border-color .2s,background .2s}
+  .cform input::placeholder,.cform textarea::placeholder{color:#8a7a68}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--lime);background:rgba(239,228,208,.08)}
+  .cform textarea{resize:vertical;min-height:110px}
+  .cform .consent{display:flex;gap:12px;align-items:flex-start;font-family:var(--body);font-size:13px;line-height:1.45;color:var(--grey);text-align:left}
+  .cform .consent input{width:18px;height:18px;flex:0 0 18px;margin-top:2px;accent-color:var(--lime)}
+  .cform .consent a{color:var(--hueso);text-decoration:underline;text-underline-offset:2px}
+  .cform button{font-family:var(--disp);font-weight:600;font-size:16px;padding:16px 30px;border-radius:100px;border:none;background:var(--lime);color:var(--hueso);cursor:pointer;transition:transform .2s,opacity .2s}
+  .cform button:hover{transform:translateY(-2px)}
+  .cform button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+  .qcontact{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .qbtn{font-family:var(--disp);font-weight:600;font-size:15px;padding:13px 22px;border-radius:100px;border:1px solid var(--line);color:var(--hueso);display:inline-flex;align-items:center;gap:9px;transition:border-color .2s,transform .2s}
+  .qbtn:hover{border-color:var(--lime);transform:translateY(-2px)}
+  .qbtn.wa{background:#25D366;border-color:#25D366;color:#0b2b16}
+  .cform input,.cform textarea{cursor:text}
+  .cform button,.cform .consent,.cform .consent *,.qbtn{cursor:pointer}
+  @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
   footer{border-top:1px solid var(--line);padding:40px 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--disp);font-size:13px;color:var(--grey)}
   footer .fl{font-weight:700;font-size:20px;color:var(--hueso);letter-spacing:-.04em}
+  footer .flegal{display:flex;gap:18px;flex-wrap:wrap}
+  footer .flegal a{color:var(--grey);transition:color .2s}
+  footer .flegal a:hover{color:var(--hueso)}
 
   .clients{border-top:1px solid var(--line);padding:64px 0;overflow:hidden}
   .lm-track{display:flex;gap:18px;width:max-content;animation:sc 46s linear infinite}
@@ -333,11 +373,44 @@
   <div class="wrap">
     <div class="lab" style="justify-content:center">¿Hablamos?</div>
     <h2>anta<span class="d">.</span></h2>
-    <p>Déjame tus datos y diseñamos una experiencia a la altura de tu marca.</p>
-    <a href="mailto:info@antacomunicacion.com" class="btn btn-lime">Quiero hablar contigo →</a>
-    <div class="info">
-      <span>+34 660 97 8037</span>
-      <span><b>info@antacomunicacion.com</b></span>
+    <p>Cuéntanos qué marca quieres construir y diseñamos una experiencia a su altura. Te respondemos en menos de 24&nbsp;h.</p>
+
+    <form class="cform" id="leadForm" novalidate>
+      <div class="frow">
+        <div>
+          <label for="lf-name">Nombre</label>
+          <input id="lf-name" name="name" type="text" placeholder="Tu nombre" required>
+        </div>
+        <div>
+          <label for="lf-brand">Marca / empresa</label>
+          <input id="lf-brand" name="brand" type="text" placeholder="Nombre de tu marca">
+        </div>
+      </div>
+      <div class="frow">
+        <div>
+          <label for="lf-email">Email</label>
+          <input id="lf-email" name="email" type="email" placeholder="tucorreo@email.com" required>
+        </div>
+        <div>
+          <label for="lf-phone">Teléfono <span style="text-transform:none;letter-spacing:0">(opcional)</span></label>
+          <input id="lf-phone" name="phone" type="tel" placeholder="+34 ...">
+        </div>
+      </div>
+      <div>
+        <label for="lf-msg">¿Qué necesitas?</label>
+        <textarea id="lf-msg" name="message" placeholder="Cuéntanos brevemente tu reto o tu objetivo."></textarea>
+      </div>
+      <label class="consent">
+        <input id="lf-consent" type="checkbox" required>
+        <span>He leído y acepto la <a href="/privacidad.html">Política de Privacidad</a> y el tratamiento de mis datos para gestionar mi consulta.</span>
+      </label>
+      <button type="submit" id="lf-submit" disabled>Enviar por WhatsApp →</button>
+    </form>
+
+    <div class="qcontact">
+      <a class="qbtn wa" href="https://wa.me/34660978037" target="_blank" rel="noopener">WhatsApp directo</a>
+      <a class="qbtn" href="tel:+34660978037">+34 660 97 8037</a>
+      <a class="qbtn" href="mailto:info@antacomunicacion.com">info@antacomunicacion.com</a>
     </div>
   </div>
 </section>
@@ -345,6 +418,11 @@
 <footer>
   <div class="fl">anta<span style="color:var(--lime)">.</span></div>
   <span>Comunicación · Estrategia · Contenido — Madrid</span>
+  <div class="flegal" role="navigation" aria-label="Enlaces legales">
+    <a href="/aviso-legal.html">Aviso legal</a>
+    <a href="/privacidad.html">Privacidad</a>
+    <a href="/cookies.html">Cookies</a>
+  </div>
   <span>© 2026 Anta Comunicación</span>
 </footer>
 
@@ -364,6 +442,25 @@
       if(!wasOpen)r.classList.add('open');
     });
   });
+  // Formulario de contacto → WhatsApp (sin backend, sin datos almacenados en servidor)
+  (function(){
+    const f=document.getElementById('leadForm'); if(!f)return;
+    const consent=document.getElementById('lf-consent'), submit=document.getElementById('lf-submit');
+    consent.addEventListener('change',()=>{submit.disabled=!consent.checked;});
+    f.addEventListener('submit',e=>{
+      e.preventDefault();
+      if(!consent.checked)return;
+      const v=id=>(document.getElementById(id).value||'').trim();
+      const name=v('lf-name'), brand=v('lf-brand'), email=v('lf-email'), phone=v('lf-phone'), msg=v('lf-msg');
+      if(!name||!email){if(f.reportValidity)f.reportValidity();return;}
+      let t='Hola Anta 👋 Soy '+name+'.';
+      if(brand)t+=' Marca: '+brand+'.';
+      t+=' Email: '+email+'.';
+      if(phone)t+=' Tel: '+phone+'.';
+      if(msg)t+=' '+msg;
+      window.open('https://wa.me/34660978037?text='+encodeURIComponent(t),'_blank','noopener');
+    });
+  })();
 </script>
 </body>
 </html>

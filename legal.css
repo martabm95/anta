@@ -7,6 +7,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--asfalto);color:var(--hueso);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.65}
 a{color:inherit}
+a:focus-visible,:focus-visible{outline:2px solid var(--lime);outline-offset:2px;border-radius:3px}
 .lgnav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:rgba(43,28,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .lgnav .logo{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.05em;text-decoration:none;color:var(--hueso)}
 .lgnav .logo .d{color:var(--lime)}
